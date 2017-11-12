@@ -1,0 +1,16 @@
+<h1>Animals#edit</h1>
+<p>Find me in app/views/animals/edit.html.erb</p>
+<h1>new</h1>
+<%= form_for @animal do |f| %>
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.label :age %>
+    <%= f.text_field :age %>
+  </p>
+
+  <%= f.submit %>
+<% end %>

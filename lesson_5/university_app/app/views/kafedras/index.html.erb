@@ -1,0 +1,15 @@
+<h1>all kafedra</h1>
+
+<%= link_to 'new kafedra', new_faculty_kafedra_path %>
+
+<p>
+  <% @kafedras.each do |kafedra| %>
+    <p>
+      <%= kafedra.name %>:
+
+      <%= link_to 'show', kafedra %> |
+      <%= link_to 'edit', edit_kafedra_path(kafedra) %> |
+      <%= link_to 'destriy', kafedra, method: :delete %>
+    </p>
+  <% end %>
+</p>

@@ -1,0 +1,19 @@
+<h1>country show</h1>
+<p>
+  <%= link_to 'New City', new_country_city_path(@country) %>
+  <%= ' | ' %>
+  <%= link_to 'Back', countries_path %>
+</p>
+
+<p>
+  <span>all cities for <%= @country.name %></span>
+  <% @country.cities.each do |city| %>
+    <p>
+      <%= city.name %>
+
+      <%= link_to 'show', city %> |
+      <%= link_to 'edit', edit_city_path(city) %> |
+      <%= link_to 'destriy', city, method: :delete %>
+    </p>
+  <% end %>
+</p>

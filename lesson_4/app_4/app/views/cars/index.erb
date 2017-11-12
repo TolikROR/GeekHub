@@ -1,0 +1,13 @@
+<h1>Index example 4</h1>
+
+<% @cars.each do |car| %>
+  <p>
+    <span><%= car.brand  %></span>
+
+    <%= link_to 'show', car %>
+    <%= link_to 'edit', edit_car_path(car)%>
+    <%= link_to 'destroy', car, method: :delete %>
+  </p>
+<% end %>
+
+<%= link_to 'add car', new_car_path %>

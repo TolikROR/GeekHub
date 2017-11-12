@@ -1,0 +1,14 @@
+<h1>show</h1>
+
+<%= link_to 'New group', new_kafedra_group_path(@kafedra) %><br>
+<%= link_to 'Home', root_path %><br>
+
+<p>
+  <span>all groups for <%= @kafedra.name %></span>
+  <% @kafedra.groups.each do |group| %>
+    <p><%= group.name %></p>
+  <% end %>
+</p>
+
+
+<br><%= link_to 'Back', kafedra_groups_path(:kafedra_id)  %>

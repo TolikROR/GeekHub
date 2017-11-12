@@ -1,0 +1,13 @@
+<h1> Index Aircraft </h1>
+
+<% @aircrafts.each do |aircraft| %>
+<h3><%= aircraft.name %></h3>
+
+<p>
+  <%= link_to 'Show', aircraft %>
+  <%= link_to 'Edit', edit_aircraft_path(aircraft) %>
+  <%= link_to 'Destroy', aircraft, method: :delete %><br>
+</p>
+
+<% end %>
+<br><%= link_to 'Back', root_path %>

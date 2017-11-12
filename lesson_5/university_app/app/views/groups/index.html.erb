@@ -1,0 +1,15 @@
+<h1>all group</h1>
+
+<%= link_to 'new group', new_kafedra_group_path %>
+
+<p>
+  <% @groups.each do |group| %>
+    <p>
+      <%= group.name %>:
+
+      <%= link_to 'show', group %> |
+      <%= link_to 'edit', edit_group_path(group) %> |
+      <%= link_to 'destriy', group, method: :delete %>
+    </p>
+  <% end %>
+</p>

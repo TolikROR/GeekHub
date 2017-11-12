@@ -1,0 +1,12 @@
+<h1>Index example 2</h1>
+
+<% @articles.each do |article| %>
+<p>
+  <span><%= article.title %></span>
+    <%= link_to 'show', article %>
+    <%= link_to 'edit', edit_article_path(article) %>
+    <%= link_to 'destroy', article , method: :delete %>
+</p>
+<% end %>
+
+<%= link_to 'new article', new_article_path%>

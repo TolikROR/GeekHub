@@ -1,0 +1,12 @@
+<h1>edit kafedra</h1>
+
+<%= form_with model: @kafedra, local: true do |f| %>
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
+  <%= f.submit %>
+<% end %>
+
+
+

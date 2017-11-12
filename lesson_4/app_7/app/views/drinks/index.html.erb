@@ -1,0 +1,14 @@
+<h1>Drinks#index</h1>
+<p>Find me in app/views/drinks/index.html.erb</p>
+
+<% @drinks.each do |drink| %>
+  <p>
+    <span><%= drink.name %></span>
+
+    <%= link_to 'show', drink %>
+    <%= link_to 'edit', edit_drink_path(drink) %>
+    <%= link_to 'destroy', drink, method: :delete %>
+  </p>
+<% end %>
+
+<%= link_to 'add drink', new_drink_path %>

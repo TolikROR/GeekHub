@@ -1,0 +1,21 @@
+<h1> Edit student </h1>
+
+<%= form_for @student do |f| %>
+  <p>
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %>
+  </p>
+
+  <p>
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name %>
+  </p>
+
+  <p>
+    <%= f.label :kurs %>
+    <%= f.text_field :kurs %>
+  </p>
+  <%= f.submit %>
+<% end %>
+
+<%= link_to 'Back', group_students_path(@student.group) %>

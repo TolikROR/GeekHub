@@ -1,0 +1,15 @@
+<h1>Foods#new</h1>
+<p>Find me in app/views/foods/new.html.erb</p>
+<%= form_for @food do |f| %>
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.label :price %>
+    <%= f.text_field :price %>
+  </p>
+
+  <%= f.submit %>
+<% end %>

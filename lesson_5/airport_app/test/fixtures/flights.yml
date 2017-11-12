@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  takeoff_airport: one
+  landing_airport: one
+  price: 1
+
+two:
+  name: MyString
+  takeoff_airport: two
+  landing_airport: two
+  price: 1

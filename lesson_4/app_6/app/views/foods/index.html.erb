@@ -1,0 +1,12 @@
+<h1>Foods#index</h1>
+<% @foods.each do |food| %>
+  <p>
+    <span><%= food.name %> </span>
+
+    <%= link_to 'show', food %>
+    <%= link_to 'edit', edit_food_path(food) %>
+    <%= link_to 'destroy', food, method: :delete %>
+  </p>
+<% end %>
+
+<%= link_to 'add food', new_food_path %>

@@ -1,0 +1,15 @@
+<h1>all faculty</h1>
+
+<%= link_to 'new faculty', new_university_faculty_path %>
+
+<p>
+  <% @faculties.each do |faculty| %>
+    <p>
+      <%= faculty.name %>:
+
+      <%= link_to 'show', faculty %> |
+      <%= link_to 'edit', edit_faculty_path(faculty) %> |
+      <%= link_to 'destriy', faculty, method: :delete %>
+    </p>
+  <% end %>
+</p>

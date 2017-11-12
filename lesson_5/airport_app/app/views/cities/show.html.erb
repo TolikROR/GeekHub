@@ -1,0 +1,14 @@
+<h1><%= 'Show' %>
+<%= @city.name %>
+<%= 'Info' %></h1>
+<p>
+  <%= link_to 'New Aircraft', new_city_aircraft_path(@city) %>
+  <%= ' | ' %>
+  <%= link_to 'Home', root_path %><br><br>
+</p>
+
+<% @city.aircrafts.each do |aircraft| %>
+  <%= aircraft.name %><br>
+<% end %>
+
+<br><%= link_to 'Back', country_cities_path(:country_id)  %>

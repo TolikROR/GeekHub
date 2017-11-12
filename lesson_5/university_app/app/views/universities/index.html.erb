@@ -1,0 +1,15 @@
+<h1>all university</h1>
+
+<%= link_to 'new univer', new_city_university_path %>
+
+<p>
+  <% @universities.each do |univer| %>
+    <p>
+      <%= univer.name %>:
+
+      <%= link_to 'show', univer %> |
+      <%= link_to 'edit', edit_university_path(univer) %> |
+      <%= link_to 'destriy', univer, method: :delete %>
+    </p>
+  <% end %>
+</p>

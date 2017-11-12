@@ -1,0 +1,16 @@
+<h1>show</h1>
+
+<%= link_to 'add student', new_group_student_path(@group) %><br>
+<%= link_to 'Home', root_path %><br>
+
+<p>
+  <span>all students for <%= @group.name %></span>
+  <% @group.students.each do |student| %>
+    <p>
+      <%= "#{student.first_name} #{student.last_name}, kurs: #{student.kurs}"%>
+    </p>
+  <% end %>
+</p>
+
+
+<br><%= link_to 'Back', group_students_path(:group_id)  %>

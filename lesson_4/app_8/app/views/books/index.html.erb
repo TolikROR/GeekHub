@@ -1,0 +1,15 @@
+<h1>Books#index</h1>
+<p>Find me in app/views/books/index.html.erb</p>
+
+<% @books.each do |book| %>
+  <p>
+    <span><%= book.title %></span>
+
+    <%= link_to 'show', book %>
+    <%= link_to 'edit', edit_book_path(book) %>
+    <%= link_to 'destroy', book, method: :delete %>
+  </p>
+<% end %>
+
+
+<%= link_to 'add book', new_book_path %>

@@ -1,0 +1,15 @@
+<h1>all countries</h1>
+
+<%= link_to 'new country', new_country_path %>
+
+<p>
+  <% @countries.each do |country| %>
+    <p>
+      <%= country.name %>:
+
+      <%= link_to 'show', country %> |
+      <%= link_to 'edit', edit_country_path(country) %> |
+      <%= link_to 'destriy', country, method: :delete %>
+    </p>
+  <% end %>
+</p>

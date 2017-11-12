@@ -1,0 +1,14 @@
+<h1>show</h1>
+
+<%= link_to 'New kafedra', new_faculty_kafedra_path(@faculty) %><br>
+<%= link_to 'Home', root_path %><br>
+
+<p>
+  <span>all kafedras for <%= @faculty.name %></span>
+  <% @faculty.kafedras.each do |kafedra| %>
+    <p><%= kafedra.name %></p>
+  <% end %>
+</p>
+
+
+<br><%= link_to 'Back', faculty_kafedras_path(:faculty_id)  %>

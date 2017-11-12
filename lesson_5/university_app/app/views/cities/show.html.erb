@@ -1,0 +1,15 @@
+<h1><%= 'Show' %>
+<%= @city.name %>
+<%= 'Info' %></h1>
+<%= link_to 'New university', new_city_university_path(@city) %><br>
+<%= link_to 'Home', root_path %><br>
+
+<p>
+  <span>all university for <%= @city.name %></span>
+  <% @city.universities.each do |university| %>
+    <p><%= university.name %></p>
+  <% end %>
+</p>
+
+
+<br><%= link_to 'Back', city_universities_path(:city_id)  %>

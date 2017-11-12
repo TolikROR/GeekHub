@@ -1,0 +1,14 @@
+<h1>students</h1>
+
+<%= link_to 'new students', new_group_student_path %>
+
+<p>
+  <% @students.each do |student| %>
+    <p>
+      <%= "#{student.first_name} #{student.last_name}, kurs: #{student.kurs}" %>
+      <%= link_to 'edit', edit_student_path(student) %> |
+      <%= link_to 'destroy', student, method: :delete %>
+
+    </p>
+  <% end %>
+</p>

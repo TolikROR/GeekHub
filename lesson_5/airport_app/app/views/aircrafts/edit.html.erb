@@ -1,0 +1,12 @@
+<h1> Edit Plane Info </h1>
+
+<%= form_for @aircraft do |f| %>
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
+
+  <%= f.submit %>
+<% end %>
+
+<br><%= link_to 'Back', city_aircrafts_path(:city_id) %>

@@ -1,0 +1,14 @@
+<h1>show</h1>
+
+<%= link_to 'New faculty', new_university_faculty_path(@university) %><br>
+<%= link_to 'Home', root_path %><br>
+
+<p>
+  <span>all faculty for <%= @university.name %></span>
+  <% @university.faculties.each do |faculty| %>
+    <p><%= faculty.name %></p>
+  <% end %>
+</p>
+
+
+<br><%= link_to 'Back', university_faculties_path(:university_id)  %>
