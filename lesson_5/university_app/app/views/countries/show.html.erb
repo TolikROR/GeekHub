@@ -6,10 +6,12 @@
 </p>
 
 <p>
+  <%= image_tag(@country.avatar.thumb) %>
   <span>all cities for <%= @country.name %></span>
   <% @country.cities.each do |city| %>
     <p>
       <%= city.name %>
+
 
       <%= link_to 'show', city %> |
       <%= link_to 'edit', edit_city_path(city) %> |

@@ -2,7 +2,7 @@ class CountriesController < ApplicationController
   before_action :find_country, only: [:show, :edit, :update, :destroy]
 
   def index
-    @countries = Country.all
+    @countries = Country.paginate(:page => params[:page])
   end
 
   def new
@@ -38,6 +38,6 @@ class CountriesController < ApplicationController
   end
 
   def country_params
-    params.require(:country).permit(:name)
+    params.require(:country).permit(:name, :avatar)
   end
 end
