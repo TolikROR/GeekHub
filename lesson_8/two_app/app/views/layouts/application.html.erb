@@ -1,3 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TwoApp</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
     <nav class="navbar navbar-inverse">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -18,7 +29,9 @@
             <li><%= link_to 'sign_in', new_user_session_path %></li>
             <li><%= link_to 'sign_up', new_user_registration_path %></li>
           <% end %>
-
         </ul>
       </div>
     </nav>
+    <%= yield %>
+  </body>
+</html>

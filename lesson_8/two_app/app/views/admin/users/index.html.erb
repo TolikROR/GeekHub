@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="col-md-2"></div>
+  <div class="col-md-8 table-striped">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>email</th>
+          <th>admin</th>
+          <th>action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @users.each do |user| %>
+          <tr>
+            <th><%= user.email %></th>
+            <th><%= user.admin %></th>
+            <th><%= link_to 'destroy', admin_user_path(user), method: :delete, remote: true %></th>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-md-2"></div>
+</div>
