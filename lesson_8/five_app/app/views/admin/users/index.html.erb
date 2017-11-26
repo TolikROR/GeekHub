@@ -1,0 +1,29 @@
+<h1>all users</h1>
+<div class="row">
+  <div class="col-md-3"></div>
+
+  <div class="col-md-6">
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>email</th>
+            <th>admin</th>
+            <th>action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @users.each do |user| %>
+            <tr id = <%="user_#{user.id}"%>>
+              <th><%= user.email %></th>
+              <th><%= user.admin %></th>
+              <th><%= link_to 'destroy', admin_user_path(user), method: :delete, remote: true  %></th>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="col-md-3"></div>
+</div>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FiveApp</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Web Site</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <% if current_admin %>
+            <li><%= link_to 'Admin', admin_root_path %></li>
+          <% end %>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <% if current_user %>
+            <li><%= link_to 'Sing Out', destroy_user_session_path, method: :delete,
+             class: "glyphicon glyphicon-log-out" %></li>
+          <% else %>
+            <li><%= link_to 'Sign Up', new_user_registration_path, class: "glyphicon glyphicon-user" %></li>
+            <li><%= link_to 'Sing in', new_user_session_path, class: "glyphicon glyphicon-log-in"%></li>
+          <% end %>
+        </ul>
+      </div>
+    </nav>
+    <%= yield %>
+  </body>
+</html>

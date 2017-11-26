@@ -1,0 +1,18 @@
+<nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Defaul page</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+            <% if current_user %>
+              <li><a href=""><%= current_user.email %></a></li>
+              <li><%= link_to 'Sing out', destroy_user_session_path, method: :delete %></li>
+              <li><%= link_to 'back to site', root_path %></li>
+            <% else %>
+              <li><%= link_to 'Sing in', new_user_session_path %></li>
+              <li><%= link_to 'Sing up', new_user_registration_path %></li>
+            <% end %>
+        </ul>
+      </div>
+    </nav>
