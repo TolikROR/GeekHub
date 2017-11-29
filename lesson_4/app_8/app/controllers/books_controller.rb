@@ -1,19 +1,17 @@
 class BooksController < ApplicationController
-  before_action :current_book, only: [:show, :edit, :update, :destroy]
+  before_action :current_book, only: %i[show edit update destroy]
 
   def index
     @books = Book.all
   end
 
-  def show
-  end
+  def show; end
 
   def new
     @book = Book.new
   end
 
-  def edit
-  end
+  def edit; end
 
   def create
     Book.create(book_params)

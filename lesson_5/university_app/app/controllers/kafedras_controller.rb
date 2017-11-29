@@ -1,5 +1,5 @@
 class KafedrasController < ApplicationController
-  before_action :find_kafedra, only: [:show, :edit, :update, :destroy]
+  before_action :find_kafedra, only: %i[show edit update destroy]
   before_action :find_faculty, only: [:create]
 
   def index

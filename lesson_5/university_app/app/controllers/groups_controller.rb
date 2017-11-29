@@ -1,5 +1,5 @@
 class GroupsController < ApplicationController
-  before_action :find_group, only: [:show, :edit, :update, :destroy]
+  before_action :find_group, only: %i[show edit update destroy]
   before_action :find_kafedra, only: [:create]
 
   def index

@@ -1,5 +1,5 @@
 class AircraftsController < ApplicationController
-  before_action :find_aircraft, only: [:show, :edit, :update, :destroy]
+  before_action :find_aircraft, only: %i[show edit update destroy]
   before_action :find_city, only: [:create]
 
   def index
@@ -16,11 +16,9 @@ class AircraftsController < ApplicationController
     redirect_to aircraft_path(@aircraft)
   end
 
-  def show
-  end
+  def show; end
 
-  def edit
-  end
+  def edit; end
 
   def update
     @aircraft.update(aircraft_params)

@@ -1,5 +1,5 @@
 class StudentsController < ApplicationController
-  before_action :current_student, only: [:edit, :show, :update, :destroy]
+  before_action :current_student, only: %i[edit show update destroy]
 
   def index
     @students = Student.all
@@ -9,11 +9,9 @@ class StudentsController < ApplicationController
     @student = Student.new
   end
 
-  def edit
-  end
+  def edit; end
 
-  def show
-  end
+  def show; end
 
   def create
     Student.create(student_params)

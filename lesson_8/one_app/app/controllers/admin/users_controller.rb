@@ -10,5 +10,4 @@ class Admin::UsersController < AdminsController
 
     redirect_to admin_users_path
   end
-
 end

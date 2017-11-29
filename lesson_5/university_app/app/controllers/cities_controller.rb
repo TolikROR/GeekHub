@@ -1,5 +1,5 @@
 class CitiesController < ApplicationController
-  before_action :find_city, only: [:show, :edit, :update, :destroy]
+  before_action :find_city, only: %i[show edit update destroy]
   before_action :find_country, only: [:create]
 
   def index
@@ -21,7 +21,7 @@ class CitiesController < ApplicationController
   def edit; end
 
   def update
-    #binding.pry
+    # binding.pry
     city.update(city_params)
 
     redirect_to city_path(@city)

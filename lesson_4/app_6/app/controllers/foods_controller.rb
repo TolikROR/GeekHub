@@ -1,5 +1,5 @@
 class FoodsController < ApplicationController
-  before_action :current_food, only: [:edit, :show, :update, :destroy]
+  before_action :current_food, only: %i[edit show update destroy]
 
   def index
     @foods = Food.all
@@ -9,11 +9,9 @@ class FoodsController < ApplicationController
     @food = Food.new
   end
 
-  def edit
-  end
+  def edit; end
 
-  def show
-  end
+  def show; end
 
   def create
     Food.create(food_params)

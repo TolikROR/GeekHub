@@ -1,5 +1,5 @@
 class StudentsController < ApplicationController
-  before_action :find_student, only: [:show, :edit, :update, :destroy]
+  before_action :find_student, only: %i[show edit update destroy]
   before_action :find_group, only: [:create]
 
   def index

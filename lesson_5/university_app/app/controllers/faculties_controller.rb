@@ -1,5 +1,5 @@
 class FacultiesController < ApplicationController
-  before_action :find_faculty, only: [:show, :edit, :update, :destroy]
+  before_action :find_faculty, only: %i[show edit update destroy]
   before_action :find_university, only: [:create]
 
   def index

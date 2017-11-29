@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resource :genders, only: [:new, :show]
+  resource :genders, only: %i[new show]
 
   resources :flights do
     resources :takeoff_airports
@@ -17,8 +17,6 @@ Rails.application.routes.draw do
   resources :users do
     resources :orders
   end
-
-
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

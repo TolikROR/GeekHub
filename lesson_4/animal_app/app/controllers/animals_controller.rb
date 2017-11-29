@@ -1,15 +1,13 @@
 class AnimalsController < ApplicationController
-  before_action :find_animal, only: [:edit, :show, :update,  :destroy]
+  before_action :find_animal, only: %i[edit show update destroy]
 
   def index
     @animals = Animal.all
   end
 
-  def edit
-  end
+  def edit; end
 
-  def show
-  end
+  def show; end
 
   def new
     @animal = Animal.new
@@ -32,8 +30,6 @@ class AnimalsController < ApplicationController
 
     redirect_to animals_path
   end
-
-
 
   private
 

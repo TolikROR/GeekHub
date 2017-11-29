@@ -1,5 +1,5 @@
 class CitiesController < ApplicationController
-  before_action :find_city, only: [:show, :edit, :update, :destroy]
+  before_action :find_city, only: %i[show edit update destroy]
   before_action :find_country, only: [:create]
 
   def index
@@ -16,11 +16,9 @@ class CitiesController < ApplicationController
     redirect_to country_cities_path(@country)
   end
 
-  def show
-  end
+  def show; end
 
-  def edit
-  end
+  def edit; end
 
   def update
     @city.update(city_params)

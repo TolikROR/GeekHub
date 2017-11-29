@@ -1,14 +1,12 @@
 class DrinksController < ApplicationController
-  before_action :current_drink, only: [:edit, :show, :update, :destroy]
+  before_action :current_drink, only: %i[edit show update destroy]
   def index
     @drinks = Drink.all
   end
 
-  def show
-  end
+  def show; end
 
-  def edit
-  end
+  def edit; end
 
   def new
     @drink = Drink.new
