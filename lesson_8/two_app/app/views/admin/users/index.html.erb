@@ -6,6 +6,7 @@
         <tr>
           <th>email</th>
           <th>admin</th>
+          <th>avatar</th>
           <th>action</th>
         </tr>
       </thead>
@@ -14,6 +15,7 @@
           <tr>
             <th><%= user.email %></th>
             <th><%= user.admin %></th>
+            <th><%= image_tag(user.avatar.url(:thumb).to_s) %></th>
             <th><%= link_to 'destroy', admin_user_path(user), method: :delete, remote: true %></th>
           </tr>
         <% end %>
